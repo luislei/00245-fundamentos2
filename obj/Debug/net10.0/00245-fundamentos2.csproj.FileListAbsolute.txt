@@ -1,0 +1,14 @@
+C:\_Dev\UC00245\00245-fundamentos2\obj\Debug\net10.0\00245-fundamentos2.GeneratedMSBuildEditorConfig.editorconfig
+C:\_Dev\UC00245\00245-fundamentos2\obj\Debug\net10.0\00245-fundamentos2.AssemblyInfoInputs.cache
+C:\_Dev\UC00245\00245-fundamentos2\obj\Debug\net10.0\00245-fundamentos2.AssemblyInfo.cs
+C:\_Dev\UC00245\00245-fundamentos2\obj\Debug\net10.0\00245-fundamentos2.csproj.CoreCompileInputs.cache
+C:\_Dev\UC00245\00245-fundamentos2\bin\Debug\net10.0\00245-fundamentos2.exe
+C:\_Dev\UC00245\00245-fundamentos2\bin\Debug\net10.0\00245-fundamentos2.deps.json
+C:\_Dev\UC00245\00245-fundamentos2\bin\Debug\net10.0\00245-fundamentos2.runtimeconfig.json
+C:\_Dev\UC00245\00245-fundamentos2\bin\Debug\net10.0\00245-fundamentos2.dll
+C:\_Dev\UC00245\00245-fundamentos2\bin\Debug\net10.0\00245-fundamentos2.pdb
+C:\_Dev\UC00245\00245-fundamentos2\obj\Debug\net10.0\00245-fundamentos2.dll
+C:\_Dev\UC00245\00245-fundamentos2\obj\Debug\net10.0\refint\00245-fundamentos2.dll
+C:\_Dev\UC00245\00245-fundamentos2\obj\Debug\net10.0\00245-fundamentos2.pdb
+C:\_Dev\UC00245\00245-fundamentos2\obj\Debug\net10.0\00245-fundamentos2.genruntimeconfig.cache
+C:\_Dev\UC00245\00245-fundamentos2\obj\Debug\net10.0\ref\00245-fundamentos2.dll
