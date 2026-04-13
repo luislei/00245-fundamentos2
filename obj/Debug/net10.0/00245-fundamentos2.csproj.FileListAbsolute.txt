@@ -12,3 +12,4 @@ C:\_Dev\UC00245\00245-fundamentos2\obj\Debug\net10.0\refint\00245-fundamentos2.d
 C:\_Dev\UC00245\00245-fundamentos2\obj\Debug\net10.0\00245-fundamentos2.pdb
 C:\_Dev\UC00245\00245-fundamentos2\obj\Debug\net10.0\00245-fundamentos2.genruntimeconfig.cache
 C:\_Dev\UC00245\00245-fundamentos2\obj\Debug\net10.0\ref\00245-fundamentos2.dll
+C:\_Dev\UC00245\00245-fundamentos2\obj\Debug\net10.0\00245-fundamentos2.sourcelink.json

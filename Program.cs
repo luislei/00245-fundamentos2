@@ -15,10 +15,14 @@ class program
         // new  EstruraDeIteracao.ExecutarForEach();
 
         estruraDeIteracao.ExecutarForBreakContinue();
+        
 
         estruraDeIteracao.ExecutarWhile();
 
         estruraDeIteracao.ExecutarDoWhile();
+
+        ArrayUnidimensional arrayUnidimensional = new ArrayUnidimensional();
+        arrayUnidimensional.ExecutarArrayUnidimensional();
 
     }    
 }
