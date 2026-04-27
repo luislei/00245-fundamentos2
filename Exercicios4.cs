@@ -13,7 +13,7 @@ namespace Aula02EstruturaDeDados;
 /// Exercício 3: Filtrar pessoas com mais de 30 anos
 /// Exercício 4: Contar pessoas com nome começando com "J"
 /// </summary>
-public class AlunoExercicio03
+public class AlunoExercicio04
 {
   /// <summary>
   /// Classe Pessoa para representar os dados
@@ -61,8 +61,39 @@ public class AlunoExercicio03
  
     // Criando lista inicial
     // ESCREVA SEU CÓDIGO AQUI - Adicionar mais 3 pessoas
-    Console.WriteLine($".....Seu Código......");
- 
+
+    Console.WriteLine("=== Gestão de Lista de Pessoas ===\n");
+
+            // 1. Criar uma List<Pessoa> com dados iniciais
+            List<Pessoa> listaPessoas = new List<Pessoa>
+            {
+                new Pessoa("Ana", 25),
+                new Pessoa("Bruno", 30),
+                new Pessoa("Carla", 35),
+                new Pessoa("Daniel", 28),
+                new Pessoa("Eduarda", 40)
+            };
+
+            // 2. Adicionar mais 3 pessoas à lista usando .Add()
+            listaPessoas.Add(new Pessoa("Fernando", 22));
+            listaPessoas.Add(new Pessoa("Grabiela", 45));
+            listaPessoas.Add(new Pessoa("Hugo", 33));
+
+            // 3. Exibir todas as pessoas da lista
+            // Usamos o foreach para percorrer cada objeto 'p' dentro da lista
+            Console.WriteLine("Lista Atualizada:");
+            Console.WriteLine("----------------------------");
+            foreach (Pessoa p in listaPessoas)
+            {
+                Console.WriteLine($"Nome: {p.Nome.PadRight(10)} | Idade: {p.Idade}");
+            }
+            Console.WriteLine("----------------------------");
+
+            Console.WriteLine($"Total de pessoas: {listaPessoas.Count}");
+
+            
+            Console.WriteLine("\nPressione qualquer tecla para continuar...");
+            Console.ReadKey();
  
     //Saida esperada:
     /**📝 Exercício 1: Adicionar pessoas à lista
@@ -96,12 +127,47 @@ public class AlunoExercicio03
     // 💡 Lambda: p => condição (p é cada elemento da lista)
  
     Console.WriteLine("\n📝 Exercício 2: Remover pessoa pelo nome");
-    Console.WriteLine($".....Seu Código......");
  
     // ESCREVA SEU CÓDIGO AQUI - Remover "Ana"
  
+ // 1. Criar a lista 
+            List<Pessoa> listaPessoas1 = new List<Pessoa>
+            {
+                new Pessoa("Ana", 25),
+                new Pessoa("Carlos", 30),
+                new Pessoa("Ricardo", 22),
+                new Pessoa("Marta", 28),
+                new Pessoa("João", 35)
+            };
+
+            Console.WriteLine("--- Lista antes da remoção ---");
+            ExibirLista(listaPessoas1);
+
+            // 2. Remover a pessoa chamada "Ana" usando Lambda
+            // Esta linha lê-se: "Remova todos os 'p' onde o Nome de 'p' seja igual a Ana"
+            int removidos = listaPessoas1.RemoveAll(p => p.Nome == "Ana");
+
+            // 3. Exibir a lista atualizada
+            Console.WriteLine($"\n--- Lista após remover 'Ana' ({removidos} remoção) ---");
+            ExibirLista(listaPessoas1);
  
- 
+ // Método auxiliar para não repetir código de exibição
+        static void ExibirLista(List<Pessoa> lista)
+        {
+            if (lista.Count == 0)
+            {
+                Console.WriteLine("A lista está vazia.");
+            }
+            foreach (var p in lista)
+            {
+                Console.WriteLine($"- {p.Nome}, {p.Idade} anos");
+            }
+        }
+
+        
+            Console.WriteLine("\nPressione qualquer tecla para continuar...");
+            Console.ReadKey();
+
     //Saida esperada:
     /**📝 Exercício 2: Remover pessoa pelo nome
     Pessoas removidas: 1
@@ -128,10 +194,49 @@ public class AlunoExercicio03
     // 💡 Também pode usar LINQ: pessoas.Where(p => p.Idade > 30).ToList()
  
     Console.WriteLine("\n📝 Exercício 3: Buscar pessoas com mais de 30 anos");
-    Console.WriteLine($".....Seu Código......");
- 
+  
     // ESCREVA SEU CÓDIGO AQUI - Filtrar pessoas com idade > 30
- 
+        // 1. Criar a lista
+
+        List<Pessoa> listaPessoas2 = new List<Pessoa>
+            {
+                new Pessoa("Ana", 25),
+                new Pessoa("Carlos", 30),
+                new Pessoa("Ricardo", 22),
+                new Pessoa("Marta", 32),
+                new Pessoa("João", 45),
+                new Pessoa("Sofia", 31)
+            };
+
+            Console.WriteLine("--- Lista Completa ---");
+            ExibirLista2(listaPessoas2);
+
+            // 2. Usar o método FindAll() para filtrar (Idade > 30)
+            List<Pessoa> pessoasMaisDe30 = listaPessoas2.FindAll(p => p.Idade > 30);
+
+            // 3. Exibir o resultado do FindAll
+            Console.WriteLine("\n--- Pessoas com mais de 30 anos (FindAll) ---");
+            ExibirLista2(pessoasMaisDe30);
+
+            // Usando LINQ (forma muito comum em projetos profissionais)
+            // O .Where filtra e o .ToList() converte o resultado de volta para uma lista
+            var filtradasLinq = listaPessoas2.Where(p => p.Idade > 30).ToList();
+            
+            Console.WriteLine("\n--- Verificação com LINQ (mesmo resultado) ---");
+            Console.WriteLine($"Total encontrado: {filtradasLinq.Count}");
+
+            Console.WriteLine("\nPressione qualquer tecla para continuar...");
+            Console.ReadKey();
+        
+
+        static void ExibirLista2(List<Pessoa> lista)
+        {
+            if (lista.Count == 0) Console.WriteLine("Nenhum resultado encontrado.");
+            foreach (var p in lista)
+            {
+                Console.WriteLine($"- {p.Nome} ({p.Idade} anos)");
+            }
+        }
  
     //Saida esperada:
     /**📝 Exercício 3: Buscar pessoas com mais de 30 anos
@@ -156,11 +261,59 @@ public class AlunoExercicio03
     Console.WriteLine("\n📝 Exercício 4: Contar pessoas com nome começando com 'J'");
  
     // Adicionar algumas pessoas com nome começando com J para teste
-    Console.WriteLine($".....Seu Código......");
+
  
     // ESCREVA SEU CÓDIGO AQUI - Chamar o método ContarPessoasComJ
  
- 
+ // 1. Criar a lista e adicionar as pessoas conforme a saída esperada
+            List<Pessoa> listaPessoas3 = new List<Pessoa>
+            {
+                new Pessoa("Bruno", 30),
+                new Pessoa("Carla", 35),
+                new Pessoa("Daniel", 28),
+                new Pessoa("Eduarda", 40),
+                new Pessoa("Fernando", 22),
+                new Pessoa("Gabriela", 45),
+                new Pessoa("Hugo", 33),
+                new Pessoa("João", 29),
+                new Pessoa("Julia", 31),
+                new Pessoa("Jéssica", 27),
+                new Pessoa("José", 42)
+            };
+
+            // Exibir a lista completa
+            Console.WriteLine("\nLista completa:");
+            foreach (var p in listaPessoas3)
+            {
+                Console.WriteLine($"  - {p.Nome} ({p.Idade} anos)");
+            }
+
+            // 4. Chamar o método ContarPessoasComJ e exibir o resultado
+            int quantidade = ContarPessoasComJ(listaPessoas3);
+
+            Console.WriteLine($"\n✅ Total de pessoas cujo nome começa com 'J': {quantidade}");
+
+            Console.WriteLine("\nPressione qualquer tecla para continuar...");
+            Console.ReadKey();
+
+        
+        // 2. Método ContarPessoasComJ
+        static int ContarPessoasComJ(List<Pessoa> pessoas)
+        {
+            int contador = 0;
+
+            foreach (var p in pessoas)
+            {
+                // 3. Usar StartsWith() ignorando maiúsculas/minúsculas
+                if (p.Nome.StartsWith("J", StringComparison.OrdinalIgnoreCase))
+                {
+                    contador++;
+                }
+            }
+
+            return contador;
+        }
+
     //Saida esperada:
     /**📝 Exercício 4: Contar pessoas com nome começando com 'J'
  

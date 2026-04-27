@@ -38,6 +38,9 @@ class program
 
         AlunoFuncoesMetodos alunoFuncoesMetodos = new AlunoFuncoesMetodos();
         alunoFuncoesMetodos.Executar();
-        
-           }    
+   
+        AlunoExercicio04 alunoExercicio04 = new AlunoExercicio04();
+        alunoExercicio04.Executar();
+
+     }    
 }
