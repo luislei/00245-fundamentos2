@@ -45,5 +45,8 @@ class program
         AlunoArraysUnidimensionais alunoArraysUnidimensionais = new AlunoArraysUnidimensionais();
         alunoArraysUnidimensionais.Executar();
 
+        AlunoManipulacaoStrings alunoManipulacaoStrings =new AlunoManipulacaoStrings();
+        alunoManipulacaoStrings.Executar();
+
      }    
 }
