@@ -24,5 +24,20 @@ class program
         ArrayUnidimensional arrayUnidimensional = new ArrayUnidimensional();
         arrayUnidimensional.ExecutarArrayUnidimensional();
 
-    }    
+        ManipulacaoDeString manipulacaoDeString = new ManipulacaoDeString();
+        manipulacaoDeString.ExecutarMetodosBasicos();
+
+        manipulacaoDeString.ExecutarBuscaExtraccao();
+
+        manipulacaoDeString.ExecutarModificacao();
+
+        manipulacaoDeString.ExecutarDivisaoJuncao();
+
+        IntroducaoAObjetos introducaoAObjetos = new IntroducaoAObjetos();
+        introducaoAObjetos.Executar();
+
+        AlunoFuncoesMetodos alunoFuncoesMetodos = new AlunoFuncoesMetodos();
+        alunoFuncoesMetodos.Executar();
+        
+           }    
 }
